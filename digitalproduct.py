@@ -12,6 +12,8 @@ class DigitalProduct(Product):
     def download_size(self):
         return self.__download_size
 
+    # Method overriding: reuse the parent part, then add our own.
     def display_information(self):
+        super().display_information()
         print("  Type: Digital | Download Size: "
               + format(self.__download_size, ".2f") + " MB")
